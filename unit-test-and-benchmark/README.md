@@ -15,7 +15,7 @@ usually we would use assert in unit test, see [example](assert)
 we may talk about mock later with interface
 
 # how to write function unit test for a function
-  * a test case per unit test func vs all test cases within a unit test func
+  * a test case per unit test func vs all test cases within a unit test func, see [example](testcases)
     * long/short test func name
     * ease/hard to test specific test case
     * clean/complex code in arrange block
@@ -24,4 +24,4 @@ we may talk about mock later with interface
 when some func take too long time to run, use parallel, see [example](parallel)
 
 # bench mark
-see [example]()
+see [example](benchmark)
