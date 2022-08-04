@@ -57,8 +57,8 @@ compiler may reorder instructions:
 1. hard to find problem
 1. hard to write test, [sample code](test/lock_hard_to_test.go).
 1. performance issue
-  * lock is expensive
-  * can not scale up
+    1. lock is expensive
+    1. can not scale up
 
 ## CSP
   [sample code](test/csp_test.go)
