@@ -59,6 +59,7 @@ compiler may reorder instructions:
 1. performance issue
     1. lock is expensive
     1. can not scale up
+    1. starvation
 
 ## CSP
   [sample code](test/csp_test.go)
