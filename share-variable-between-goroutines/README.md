@@ -53,5 +53,33 @@ compiler may reorder instructions:
   * [unsafe sample code](ordering/unsafe_test.go)  
   * [safe sample code](ordering/safe_test.go)  
 
-===
+## problem of lock
+1. hard to find problem
+1. hard to write test
+  [sample code](test/lock_hard_to_test.go)
+1. performance issue
+  * lock is expensive
+  * can not scale up
+
+## CSP
+  [sample code](test/csp_test.go)
+
+### discussion
+imaging goroutine as squard's service
+  * imaging share variable as share db
+    * every squard's service are couple in share db
+    * every change may need lots of connumication
+  * imaging channel as SNS/SQS
+    * every squard is more independent (develop scalability)
+    * every squard can scale up/down base on self's requirment (performance scalability)
+
+#### drawbacks
+open question
+
+
+## reference
 [The Go Memory Model](https://go.dev/ref/mem)
+
+## notes
+![channel behavior](imgs/channel-behavior.png)
+
