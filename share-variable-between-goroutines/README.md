@@ -55,8 +55,7 @@ compiler may reorder instructions:
 
 ## problem of lock
 1. hard to find problem
-1. hard to write test
-  [sample code](test/lock_hard_to_test.go)
+1. hard to write test, [sample code](test/lock_hard_to_test.go).
 1. performance issue
   * lock is expensive
   * can not scale up
