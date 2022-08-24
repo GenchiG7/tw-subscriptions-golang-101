@@ -4,7 +4,9 @@ how your program use mem and cpu.
 
 
 ## pprof
-[sample code](pprof/main_test.go)
+
+[sample code](pprof-optimising-struct/main_test.go)
+| this code is from global tech talk: GeoSearch 
 
 1. gen pprof file
 ```
@@ -21,4 +23,9 @@ go tool pprof -http=:5566 cpu.pprof
 go tool pprof -http=:5566 mem.pprof
 ```
 
+### what happen
+![](imgs/optimising-struct.png)
+
+### but...
+[sample code](pprof/main_test.go)
 ## trace
