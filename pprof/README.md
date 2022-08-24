@@ -26,6 +26,5 @@ go tool pprof -http=:5566 mem.pprof
 ### what happen
 ![](imgs/optimising-struct.png)
 
-### but...
-[sample code](pprof/main_test.go)
+
 ## trace
