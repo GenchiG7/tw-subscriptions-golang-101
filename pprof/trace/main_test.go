@@ -23,9 +23,9 @@ func produce(out chan<- interface{}) {
 	out <- sum
 }
 
-var concurrencyNum int = 1000
+var concurrencyNum int = 5
 
-func BenchmarkProducerFirst(b *testing.B) {
+func TestProducerConsumer(t *testing.T) {
 	buffer := make(chan interface{}, concurrencyNum)
 	finishChans := make([]<-chan interface{}, concurrencyNum)
 
@@ -35,23 +35,6 @@ func BenchmarkProducerFirst(b *testing.B) {
 
 	for i := 0; i < concurrencyNum; i++ {
 		finishChans[i] = consume(buffer)
-	}
-
-	for i := 0; i < concurrencyNum; i++ {
-		<-finishChans[i]
-	}
-}
-
-func BenchmarkComsumerFirst(b *testing.B) {
-	buffer := make(chan interface{}, concurrencyNum)
-	finishChans := make([]<-chan interface{}, concurrencyNum)
-
-	for i := 0; i < concurrencyNum; i++ {
-		finishChans[i] = consume(buffer)
-	}
-
-	for i := 0; i < concurrencyNum; i++ {
-		produce(buffer)
 	}
 
 	for i := 0; i < concurrencyNum; i++ {

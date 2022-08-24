@@ -28,3 +28,14 @@ go tool pprof -http=:5566 mem.pprof
 
 
 ## trace
+[sample code](trace/main_test.go)
+
+1. gen trace file
+```
+go test -v -trace=trace.out
+```
+
+2. observer goroutine
+```
+go tool trace -http=:5566 trace.out
+```
